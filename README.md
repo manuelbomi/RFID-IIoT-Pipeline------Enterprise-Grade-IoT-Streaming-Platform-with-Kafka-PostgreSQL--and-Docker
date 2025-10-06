@@ -608,7 +608,7 @@ SELECT COUNT(*) FROM temperature_reads;  -- Count records
 
 * Scaling for Production
 
-##### Increase Kafka Partitions
+#### Increase Kafka Partitions
 
 ```ruby
 # Scale topics for higher throughput
@@ -619,7 +619,7 @@ docker-compose exec kafka kafka-topics --alter \
 
 ```
 
-##### Add Multiple Consumers
+#### Add Multiple Consumers
 
 ```ruby
 
@@ -637,7 +637,7 @@ consumer2:
 
 ```
 
-##### Database Optimization
+#### Database Optimization
 
 ```ruby
 -- Add performance indexes
@@ -653,5 +653,96 @@ CREATE TABLE temperature_reads_2025_10 PARTITION OF temperature_reads
 
 
 ```
+
+#### Environment Variables
+
+* Customize the system behavior by modifying environment variables in docker-compose.yml:
+  
+```ruby
+environment:
+  NUM_DEVICES: "10000"           # Number of simulated devices
+  PRODUCER_SLEEP_MS: "50"        # Message frequency per device
+  BATCH_SIZE: "1000"             # Consumer batch size
+  BATCH_TIMEOUT: "1"             # Consumer batch timeout (seconds)
+  PUSH_INTERVAL_SECONDS: "30"    # Cloud export interval
+
+```
+
+#### Monitoring & Maintenance
+
+* Service Health Checks
+
+```ruby
+# Check all services status
+docker-compose ps
+
+# View service logs
+docker-compose logs producer
+docker-compose logs consumer
+docker-compose logs kafka
+
+# Real-time log monitoring
+docker-compose logs -f consumer
+
+```
+
+#### Performance Monitoring
+
+```ruby
+# Database performance
+docker-compose exec postgres psql -U rfiduser -d rfiddb -c "
+SELECT 
+    schemaname,
+    relname,
+    seq_scan,
+    seq_tup_read,
+    idx_scan,
+    idx_tup_fetch
+FROM pg_stat_user_tables;"
+
+# Kafka performance
+docker-compose exec kafka kafka-topics --describe --bootstrap-server localhost:9092
+
+```
+
+#### Data Export & Backup
+```ruby
+# Manual data export
+docker-compose exec postgres pg_dump -U rfiduser rfiddb > backup_$(date +%Y%m%d).sql
+
+# Check exported CSV files
+ls -la cloud_data/
+
+```
+
+#### Deployment Options
+
+* Local Development
+
+```ruby
+# Full stack with 100 devices for testing
+NUM_DEVICES=100 docker-compose up -d
+
+```
+
+* * Local Development
+
+```ruby
+
+# Scale for production (10K+ devices)
+NUM_DEVICES=10000 BATCH_SIZE=5000 docker-compose up -d
+
+# Add monitoring and logging
+docker-compose -f docker-compose.yml -f docker-compose.monitoring.yml up -d
+
+```
+
+
+```ruby
+# Full stack with 100 devices for testing
+NUM_DEVICES=100 docker-compose up -d
+
+```
+
 
 
