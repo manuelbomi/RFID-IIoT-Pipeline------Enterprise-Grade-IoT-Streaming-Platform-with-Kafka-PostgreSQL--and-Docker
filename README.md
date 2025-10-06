@@ -803,10 +803,9 @@ docker-compose exec postgres psql -U rfiduser -d rfiddb -c "SELECT COUNT(*) FROM
 
 # Scale up
 docker-compose up -d --scale consumer=3
-  
 
+```
 ---
-
 ## Performance Metrics
 
 #### Demonstrated Capabilities: 
@@ -830,7 +829,7 @@ docker-compose up -d --scale consumer=3
 ---
 
 Thank you for reading
----
+
 
 ### **AUTHOR'S BACKGROUND**
 ### Author's Name:  Emmanuel Oyekanlu
