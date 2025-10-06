@@ -250,7 +250,7 @@ rfid-iot-pipeline/
 * Clone the Repository
 
 ```ruby
-git clone https://github.com/your-username/rfid-iot-pipeline.git
+git clone https://github.com/manuelbomi/RFID-IIoT-Pipeline------Enterprise-Grade-IoT-Streaming-Platform-with-Kafka-PostgreSQL-Docker.git
 cd rfid-iot-pipeline
 ```
 
