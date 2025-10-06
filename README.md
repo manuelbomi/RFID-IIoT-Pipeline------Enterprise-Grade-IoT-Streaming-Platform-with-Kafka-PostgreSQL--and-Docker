@@ -9,8 +9,6 @@
 ##### The RFID IIoT Pipeline is a comprehensive, production-ready data streaming platform designed specifically for massive-scale IoT and Industrial IoT (IIoT) applications. This solution enables enterprises to process, analyze, and manage real-time data from thousands of RFID devices and sensors at the edge before selectively pushing valuable insights to the cloud.
 
 
-
-
 ## Critical Enterprise Value Propositions
 
 * Massive-Scale Real-time Analytics
