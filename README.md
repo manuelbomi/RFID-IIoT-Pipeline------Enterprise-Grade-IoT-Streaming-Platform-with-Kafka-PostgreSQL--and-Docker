@@ -382,6 +382,37 @@ docker-compose exec kafka kafka-consumer-groups --describe \
 
 ---
 
+### Database Interaction
+
+* Using pgAdmin Web Interface
+  
+Access pgAdmin: <ins>http://localhost:8080</ins>
+
+```ruby
+Login Credentials:
+
+Email: admin@rfid.com
+
+Password: admin
+
+Add PostgreSQL Server:
+
+Name: RFID PostgreSQL
+
+Host: postgres
+
+Port: 5432
+
+Database: rfiddb
+
+Username: rfiduser
+
+Password: rfidpass
+
+Useful SQL Queries
+
+```
+
 
 
 
