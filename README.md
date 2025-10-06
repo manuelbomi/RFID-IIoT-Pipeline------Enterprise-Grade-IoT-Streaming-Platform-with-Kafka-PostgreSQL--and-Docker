@@ -737,5 +737,15 @@ docker-compose -f docker-compose.yml -f docker-compose.monitoring.yml up -d
 
 ```
 
+* Cloud Integration
+  
+```ruby
+# Export to AWS S3 (example)
+docker-compose exec postgres psql -U rfiduser -d rfiddb -c "\copy temperature_reads TO 's3://your-bucket/temperature_export.csv' CSV HEADER"
+
+```
+
+--- 
+
 
 
