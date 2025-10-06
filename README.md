@@ -235,6 +235,25 @@ rfid-iot-pipeline/
   
 ```
 
+### Quick Start (prerequisites)
+
+* Docker Desktop 20.10+
+
+* Docker Compose 2.0+
+
+* 4GB+ RAM available
+
+* Git
+
+### Installation & Setup
+
+* Clone the Repository
+
+```ruby
+git clone https://github.com/your-username/rfid-iot-pipeline.git
+cd rfid-iot-pipeline
+```
+
 
 
 
