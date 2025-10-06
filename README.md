@@ -197,7 +197,7 @@ Regulatory compliance through comprehensive audit trails
 
 * Real-time decision making at the edge
 
-### <>insCost Optimization</ins> 🏪
+### <ins>Cost Optimization</ins> 🏪
 
 * Reduced cloud infrastructure costs - process data locally
 
@@ -379,6 +379,9 @@ docker-compose exec kafka kafka-consumer-groups --describe \
 }
 
 ```
+
+---
+
 
 
 
