@@ -29,7 +29,7 @@
 
 * Scalable Kafka-based streaming that grows with your IoT deployment
 
-### Key Advantage: Process terabytes of raw sensor data locally, then send only kilobytes of business intelligence to the cloud, reducing:
+### <ins>Key Advantage</ins>: Process terabytes of raw sensor data locally, then send only kilobytes of business intelligence to the cloud, thereby reducing:
 
 * Cloud infrastructure costs by 60-80%
 
