@@ -1,6 +1,6 @@
 # RFID-IIoT-Pipeline: Enterprise-Grade-IoT-Streaming-Platform-with-Kafka-PostgreSQL-Docker
 
->        >         >       >       > ![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg?logo=docker)         ![Apache Kafka](https://img.shields.io/badge/Apache--Kafka-orange.svg?logo=apachekafka)        ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg?logo=postgresql)          ![Python](https://img.shields.io/badge/Python-3.11-green.svg?logo=python)
+>>>> ![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg?logo=docker)         ![Apache Kafka](https://img.shields.io/badge/Apache--Kafka-orange.svg?logo=apachekafka)        ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg?logo=postgresql)          ![Python](https://img.shields.io/badge/Python-3.11-green.svg?logo=python)
          
              
                    
