@@ -70,31 +70,33 @@ Regulatory compliance through comprehensive audit trails
 
 1. Separation of Concerns (as shown in the figure below)
 
-* Kafka: Handles raw data ingestion and real-time processing
+    * Kafka: Handles raw data ingestion and real-time processing
 
-* PostgreSQL: Provides structured storage and complex query capabilities
+    * PostgreSQL: Provides structured storage and complex query capabilities
 
-* Cloud Export: Enables selective data synchronization
+    * Cloud Export: Enables selective data synchronization
+    * 
+  
+  ![Image](https://github.com/user-attachments/assets/670a6e6d-ec2c-4826-ba61-757ac3ff986a)
 
 
 2. Fault Tolerance & Resilience
 
-* Message durability through Kafka persistence
+    * Message durability through Kafka persistence
 
-* Data integrity with transactional database operations
+    * Data integrity with transactional database operations
 
-* Disconnected operation capability during network outages
+    * Disconnected operation capability during network outages
 
 
 3. Technology Agnostic
 
-* Interchangeable components (Kafka → RabbitMQ, PostgreSQL → TimescaleDB)
+    * Interchangeable components (Kafka → RabbitMQ, PostgreSQL → TimescaleDB)
 
-* Cloud vendor independence - deploy on-premises or any cloud provider
+    * Cloud vendor independence - deploy on-premises or any cloud provider
 
-* Protocol flexibility - supports MQTT, HTTP, and custom protocols
-
-
+    * Protocol flexibility - supports MQTT, HTTP, and custom protocols
 
 
-![Image](https://github.com/user-attachments/assets/670a6e6d-ec2c-4826-ba61-757ac3ff986a)
+
+
