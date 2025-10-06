@@ -64,4 +64,7 @@ Regulatory compliance through comprehensive audit trails
    Edge Data          Real-time              Structured Data        Business Intelligence
    Collection         Processing               Storage                 & Dashboards
   
-     ```
+```
+
+
+![Image](https://github.com/user-attachments/assets/670a6e6d-ec2c-4826-ba61-757ac3ff986a)
