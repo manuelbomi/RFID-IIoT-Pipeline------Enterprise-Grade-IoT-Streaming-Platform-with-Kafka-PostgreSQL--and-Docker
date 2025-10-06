@@ -267,6 +267,23 @@ docker-compose up -d
 docker-compose ps
 ```
 
+* Create Kafka Topics (if not auto-created)
+```ruby
+# Create temperature reads topic
+docker-compose exec kafka kafka-topics --create \
+  --topic temperature_reads \
+  --bootstrap-server localhost:9092 \
+  --partitions 1 \
+  --replication-factor 1
+
+# Create price lookups topic
+docker-compose exec kafka kafka-topics --create \
+  --topic price_lookups \
+  --bootstrap-server localhost:9092 \
+  --partitions 1 \
+  --replication-factor 1
+```
+
 
 
 
