@@ -1,0 +1,84 @@
+version: "3.8"
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"     
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: rfiduser
+      POSTGRES_PASSWORD: rfidpass
+      POSTGRES_DB: rfiddb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init-db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@rfid.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+
+  producer:
+    build:
+      context: ./kafka-producer
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BOOTSTRAP: "kafka:9092"
+      PRODUCER_SLEEP_MS: "50"
+      NUM_DEVICES: "10000"
+      TEMPERATURE_TOPIC: "temperature_reads"
+      PRICE_TOPIC: "price_lookups"
+
+  consumer:
+    build:
+      context: ./kafka-consumer
+    depends_on:
+      - kafka
+      - postgres
+    environment:
+      KAFKA_BOOTSTRAP: "kafka:9092"
+      TEMPERATURE_TOPIC: "temperature_reads"
+      PRICE_TOPIC: "price_lookups"
+      PG_DSN: "postgresql://rfiduser:rfidpass@postgres:5432/rfiddb"
+      BATCH_SIZE: "1000"
+      BATCH_TIMEOUT: "1"
+
+  cloud-push:
+    build:
+      context: ./cloud-push
+    depends_on:
+      - postgres
+    environment:
+      PG_DSN: "postgresql://rfiduser:rfidpass@postgres:5432/rfiddb"
+      PUSH_INTERVAL_SECONDS: "30"
+      OUTPUT_PATH: "/data/export"
+    volumes:
+      - ./cloud_data:/data/export
+
+volumes:
+  pgdata:
