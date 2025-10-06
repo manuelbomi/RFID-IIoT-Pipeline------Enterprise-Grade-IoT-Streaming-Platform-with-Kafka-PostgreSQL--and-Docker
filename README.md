@@ -480,27 +480,178 @@ Useful SQL Queries
 
 #### Real time analytics
 
+```ruby
+
+-- Current device activity
+SELECT 
+    COUNT(*) as total_reads,
+    COUNT(DISTINCT epc) as unique_devices,
+    AVG(temperature) as avg_temperature,
+    MAX(timestamp) as latest_reading
+FROM temperature_reads 
+WHERE timestamp > NOW() - INTERVAL '1 hour';
+
+```
+
+
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/3f7c3cbe-6ba6-4ebb-9eb4-c86950b52834" />
 
 
 #### Price lookup analytics
 
+```ruby
+-- Price lookup analytics
+SELECT 
+    item_name,
+    COUNT(*) as lookup_count,
+    AVG(price) as average_price,
+    currency
+FROM price_lookups 
+WHERE timestamp > NOW() - INTERVAL '1 day'
+GROUP BY item_name, currency
+ORDER BY lookup_count DESC;
+
+```
+
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/4d285f6d-e7c8-49fa-9d3f-2f7184814219" />
 
-####  Device monitoring
+####  Device performance monitoring
+
+```ruby
+-- Device performance monitoring
+SELECT 
+    epc,
+    COUNT(*) as read_count,
+    AVG(temperature) as avg_temp,
+    MIN(temperature) as min_temp,
+    MAX(temperature) as max_temp
+FROM temperature_reads 
+WHERE timestamp > NOW() - INTERVAL '24 hours'
+GROUP BY epc
+HAVING COUNT(*) > 100
+ORDER BY read_count DESC;
+
+```
 
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/45125e0a-c6f3-4627-9a95-94be812375bb" />
 
 #### Business intelligence SQL queries
 
+```ruby
+-- Peak activity hours
+SELECT 
+    EXTRACT(HOUR FROM timestamp) as hour_of_day,
+    COUNT(*) as read_count,
+    COUNT(DISTINCT epc) as active_devices
+FROM temperature_reads 
+GROUP BY hour_of_day
+ORDER BY hour_of_day;
+
+```
+
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/89159f87-15c6-4b1c-86e4-cdab79cdca03" />
 
 #### Prodcut popularity analysis
+
+```ruby
+-- Product popularity analysis
+SELECT 
+    item_name,
+    sku,
+    COUNT(*) as total_lookups,
+    COUNT(DISTINCT epc) as unique_devices,
+    price,
+    currency
+FROM price_lookups 
+GROUP BY item_name, sku, price, currency
+ORDER BY total_lookups DESC;
+
+```
 
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/25ea1771-2de1-476f-9a06-fd68d4f1d912" />
 
 #### Temperature trend analysis
 
+```ruby
+-- Temperature trend analysis
+SELECT 
+    DATE(timestamp) as reading_date,
+    AVG(temperature) as daily_avg_temp,
+    MIN(temperature) as daily_min_temp,
+    MAX(temperature) as daily_max_temp,
+    COUNT(*) as daily_readings
+FROM temperature_reads 
+GROUP BY reading_date
+ORDER BY reading_date DESC;
+
+```
+
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/5d26f995-3e2c-4b59-a736-81c28bf60254" />
+
+---
+
+### Command Line Database Access
+
+#### In case of of any issue with pgAdmin, you can use the command line to interact with the tables in your database
+
+```ruby
+# Connect to PostgreSQL
+docker-compose exec postgres psql -U rfiduser -d rfiddb
+
+# Common commands within psql
+\dt                    -- List all tables
+\d temperature_reads   -- Describe table structure
+SELECT COUNT(*) FROM temperature_reads;  -- Count records
+```
+
+###  Configuration & Customization
+
+* Scaling for Production
+
+##### Increase Kafka Partitions
+
+```ruby
+# Scale topics for higher throughput
+docker-compose exec kafka kafka-topics --alter \
+  --topic temperature_reads \
+  --partitions 20 \
+  --bootstrap-server localhost:9092
+
+```
+
+##### Add Multiple Consumers
+
+```ruby
+
+# In docker-compose.yml - add multiple consumer instances
+consumer2:
+  build:
+    context: ./kafka-consumer
+  depends_on:
+    - kafka
+    - postgres
+  environment:
+    KAFKA_BOOTSTRAP: "kafka:9092"
+    KAFKA_TOPIC: "rfid_reads"
+    PG_DSN: "postgresql://rfiduser:rfidpass@postgres:5432/rfiddb"
+
+```
+
+##### Database Optimization
+
+```ruby
+-- Add performance indexes
+CREATE INDEX CONCURRENTLY idx_temperature_epc_time 
+ON temperature_reads (epc, timestamp);
+
+CREATE INDEX CONCURRENTLY idx_price_sku_time 
+ON price_lookups (sku, timestamp);
+
+-- Table partitioning for large datasets
+CREATE TABLE temperature_reads_2025_10 PARTITION OF temperature_reads
+  FOR VALUES FROM ('2025-10-01') TO ('2025-11-01');
+
+
+```
 
 
