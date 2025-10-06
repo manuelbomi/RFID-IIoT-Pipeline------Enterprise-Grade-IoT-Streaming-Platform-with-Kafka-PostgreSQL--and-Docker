@@ -310,9 +310,13 @@ docker-compose up -d
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/d4023c4d-b63d-4dfc-a916-a59a8bf91246" />
 
 
+**Data insertion test and data quality test**
 
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/d11392d4-4527-446e-8a9d-cbd648c6a8fa" />
 
+**Sample data from both temperature (IoT) and prices (RFID) table**
 
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/9ae2cb7b-37bd-455c-8576-8a8ea2692f8a" />
 
 
 
