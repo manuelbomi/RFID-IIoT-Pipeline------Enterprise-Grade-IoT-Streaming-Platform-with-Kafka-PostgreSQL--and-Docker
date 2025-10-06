@@ -50,3 +50,13 @@ Supply chain visibility from raw materials to customer delivery
 Quality control with environmental condition tracking
 
 Regulatory compliance through comprehensive audit trails
+
+
+<ins>Enterprise Data Pipeline Architecture</ins>
+
+* Modern Streaming Foundation
+
+* RFID/IIoT Devices → Kafka Stream Processing → PostgreSQL Data Warehouse → Cloud Analytics
+       ↓                    ↓                       ↓                      ↓
+   Edge Data          Real-time              Structured Data        Business Intelligence
+   Collection         Processing               Storage                 & Dashboards
