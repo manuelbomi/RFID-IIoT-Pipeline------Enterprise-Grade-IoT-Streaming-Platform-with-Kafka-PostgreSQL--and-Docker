@@ -56,14 +56,12 @@ Regulatory compliance through comprehensive audit trails
 
 * Modern Streaming Foundation
 
-* RFID/IIoT Devices → Kafka Stream Processing → PostgreSQL Data Warehouse → Cloud Analytics
 
-     ```ruby
-     
-           ↓                    ↓                       ↓                      ↓
+```ruby
+
+     RFID/IIoT Devices → Kafka Stream Processing → PostgreSQL Data Warehouse → Cloud Analytics
+       ↓                    ↓                       ↓                      ↓
    Edge Data          Real-time              Structured Data        Business Intelligence
    Collection         Processing               Storage                 & Dashboards
-     
-      ```
   
-
+     ```
