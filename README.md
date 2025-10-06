@@ -254,6 +254,21 @@ git clone https://github.com/manuelbomi/RFID-IIoT-Pipeline------Enterprise-Grade
 cd rfid-iot-pipeline
 ```
 
+* Start the Complete Stack
+  
+```ruby
+docker-compose up -d
+```
+
+* Wait for Services to Initialize (30-60 seconds)
+
+```ruby
+# Check all services are running
+docker-compose ps
+```
+
+
+
 
 
 
