@@ -468,6 +468,11 @@ Alternately, after using <ins>admin@rfid.com</ins> and password <ins>admin</ins>
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/b232f3a9-bf45-4f6d-aca4-1a47b4e86de1" />
 
 
+* To query the tables via PostgreSQL pgAdmin, select the database, click on tools and select Query Tools
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/764981ea-419d-4d77-b14f-3f7861f6fd6e" />
+
+
 
 
 
