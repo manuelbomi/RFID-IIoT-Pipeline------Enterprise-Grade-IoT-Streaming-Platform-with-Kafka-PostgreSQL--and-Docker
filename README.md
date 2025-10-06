@@ -14,17 +14,17 @@
 
 ##### This solution enables enterprises to process, analyze, and manage real-time data from thousands of RFID devices and sensors at the edge before selectively pushing valuable insights to the cloud. By way of concise description, the platform is an edge computing architecture for cost optimization and scalable proceesing of massive streaming data from IoT devices
 
-### Why This Project Matters
+## Why This Project Matters
 
 ##### In an era where IoT devices are projected to generate 79.4 zettabytes of data annually, enterprises face the challenge of extracting value without incurring massive cloud costs. This project provides the architectural blueprint for:
 
-  Intelligent edge computing that processes data where it is generated
+  * Intelligent edge computing that processes data where it is generated
 
-  Cost-effective scalability that grows with business needs
+  * Cost-effective scalability that grows with business needs
 
-  Real-time analytics that drive immediate business decisions
+  * Real-time analytics that drive immediate business decisions
 
-  Future-proof architecture that adapts to evolving IoT landscapes
+  * Future-proof architecture that adapts to evolving IoT landscapes
 
 This isn't just a technical demonstration, it is a production-proven foundation for enterprise IoT transformation that delivers immediate ROI through reduced cloud costs and enhanced operational intelligence.
 
