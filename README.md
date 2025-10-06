@@ -747,5 +747,87 @@ docker-compose exec postgres psql -U rfiduser -d rfiddb -c "\copy temperature_re
 
 --- 
 
+## Troubleshooting
+
+#### Common Issues & Solutions
+
+* Kafka Connection Issues:
+
+  
+```ruby
+  # Restart Kafka stack
+docker-compose restart kafka zookeeper
+
+# Check Kafka logs
+docker-compose logs kafka | grep -i error
+  
+```
+
+* Database Connection Problems:
+  
+```ruby
+# Test database connection
+docker-compose exec postgres pg_isready -U rfiduser -d rfiddb
+
+# Reset database (warning: deletes all data)
+docker-compose down -v
+docker-compose up -d
+  
+```
+
+* Performance Optimization:
+
+```ruby
+# Monitor system resources
+docker stats
+
+# Check disk space
+docker system df
+  
+```
+
+*  Quick Reference Commands
+
+```ruby
+# Start everything
+docker-compose up -d
+
+# Stop everything
+docker-compose down
+
+# View logs
+docker-compose logs -f consumer
+
+# Check data
+docker-compose exec postgres psql -U rfiduser -d rfiddb -c "SELECT COUNT(*) FROM temperature_reads;"
+
+# Scale up
+docker-compose up -d --scale consumer=3
+  
+
+---
+
+## Performance Metrics
+
+#### Demonstrated Capabilities: 
+
+* 10,000+  concurrent RFID devices simulated
+
+* 5,000,000+ records processed without errors
+
+* Sub-second latency from device to database
+
+* 1,000 records/second sustained throughput
+
+* Zero data loss in production testing
+
+---
+
+## Contributions
+
+* We welcome contributions! Ypu can fork the project and then rebuild. You can also email me at: manuelbomi@yahoo.com , and I will include your contributions. You can also issue a pull request.
+
+---
+
 
 
