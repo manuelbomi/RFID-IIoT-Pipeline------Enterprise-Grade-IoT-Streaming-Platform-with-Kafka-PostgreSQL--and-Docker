@@ -291,7 +291,37 @@ docker-compose exec kafka kafka-topics --create \
 docker-compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
 ```
 
+
+#### Below are examples of some outputs using VSCode:
+
+```ruby
+docker-compose up -d
+
+```
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/79bafaae-78a4-4bb9-b4b6-09d56a77a2cb" />
+
+
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/843b327b-8f85-476b-a16f-890c1c468315" />
+
+
+
+
+
+
+
+
+
+
+
+
 ---
+
+
+
+
+
 
 ## Technical Configuration
 
@@ -382,7 +412,7 @@ docker-compose exec kafka kafka-consumer-groups --describe \
 
 ---
 
-### Database Interaction
+### Database  (PostgreSQL) Interaction
 
 * Using pgAdmin Web Interface
   
