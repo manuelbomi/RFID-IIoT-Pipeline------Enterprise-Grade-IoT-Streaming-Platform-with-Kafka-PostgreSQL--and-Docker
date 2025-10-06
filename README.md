@@ -462,6 +462,12 @@ Alternately, after using <ins>admin@rfid.com</ins> and password <ins>admin</ins>
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/317e6072-6613-4224-ac47-307bdeb8303d" />
 
 
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/41dda18d-3294-4406-a250-3737e2c93d2d" />
+
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/b232f3a9-bf45-4f6d-aca4-1a47b4e86de1" />
+
+
 
 
 
