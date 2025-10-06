@@ -305,7 +305,9 @@ docker-compose up -d
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/843b327b-8f85-476b-a16f-890c1c468315" />
 
 
+**Both producer and consumer working**
 
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/d4023c4d-b63d-4dfc-a916-a59a8bf91246" />
 
 
 
