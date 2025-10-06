@@ -725,7 +725,7 @@ NUM_DEVICES=100 docker-compose up -d
 
 ```
 
-* * Local Development
+* Production Development
 
 ```ruby
 
@@ -734,13 +734,6 @@ NUM_DEVICES=10000 BATCH_SIZE=5000 docker-compose up -d
 
 # Add monitoring and logging
 docker-compose -f docker-compose.yml -f docker-compose.monitoring.yml up -d
-
-```
-
-
-```ruby
-# Full stack with 100 devices for testing
-NUM_DEVICES=100 docker-compose up -d
 
 ```
 
