@@ -457,7 +457,7 @@ Useful SQL Queries
 
 ```
 
-Alternately, after using <ins>admin@rfid.com</ins> and password <ins>admin</ins> to login via pgadmi, you can copy pgadmin server login parameters from the docker-compose file
+#### Alternately, after using <ins>admin@rfid.com</ins> and password <ins>admin</ins> to login via pgadmi, you can copy pgadmin server login parameters from the docker-compose file
 
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/317e6072-6613-4224-ac47-307bdeb8303d" />
 
@@ -468,12 +468,39 @@ Alternately, after using <ins>admin@rfid.com</ins> and password <ins>admin</ins>
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/b232f3a9-bf45-4f6d-aca4-1a47b4e86de1" />
 
 
-* To query the tables via PostgreSQL pgAdmin, select the database, click on tools and select Query Tools
+#### To query the tables via PostgreSQL pgAdmin, select the database, click on tools and select Query Tools
 
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/764981ea-419d-4d77-b14f-3f7861f6fd6e" />
 
 
+#### Count the records in temperature_reads table
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/6766fe8c-7892-4904-bc2d-f6262e908ebb" />
 
 
+#### Real time analytics
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/3f7c3cbe-6ba6-4ebb-9eb4-c86950b52834" />
+
+
+#### Price lookup analytics
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/4d285f6d-e7c8-49fa-9d3f-2f7184814219" />
+
+####  Device monitoring
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/45125e0a-c6f3-4627-9a95-94be812375bb" />
+
+#### Business intelligence SQL queries
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/89159f87-15c6-4b1c-86e4-cdab79cdca03" />
+
+#### Prodcut popularity analysis
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/25ea1771-2de1-476f-9a06-fd68d4f1d912" />
+
+#### Temperature trend analysis
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/5d26f995-3e2c-4b59-a736-81c28bf60254" />
 
 
