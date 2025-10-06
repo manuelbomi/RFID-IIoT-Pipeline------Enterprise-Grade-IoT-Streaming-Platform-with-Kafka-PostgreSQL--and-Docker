@@ -284,6 +284,11 @@ docker-compose exec kafka kafka-topics --create \
   --replication-factor 1
 ```
 
+# Verify Topics Creation
+```ruby
+docker-compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
+```
+
 
 
 
