@@ -457,6 +457,9 @@ Useful SQL Queries
 
 ```
 
+Alternately, after using <ins>admin@rfid.com</ins> and password <ins>admin</ins> to login via pgadmi, you can copy pgadmin server login parameters from the docker-compose file
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/317e6072-6613-4224-ac47-307bdeb8303d" />
 
 
 
