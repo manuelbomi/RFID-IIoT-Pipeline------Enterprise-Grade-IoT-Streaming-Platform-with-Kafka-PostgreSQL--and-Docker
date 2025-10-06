@@ -29,7 +29,7 @@
 
 * Scalable Kafka-based streaming that grows with your IoT deployment
 
-### <ins>Key Advantage</ins>: Process terabytes of raw sensor data locally, then send only kilobytes of business intelligence to the cloud, thereby reducing:
+### <ins>Key Advantages</ins>: Process terabytes of raw sensor data locally, then send only kilobytes of business intelligence to the cloud, thereby reducing:
 
 * Cloud infrastructure costs by 60-80%
 
@@ -52,7 +52,7 @@ Quality control with environmental condition tracking
 Regulatory compliance through comprehensive audit trails
 
 
-<ins>Enterprise Data Pipeline Architecture</ins>
+### <ins>Enterprise Streaming Data Pipeline Architecture</ins>
 
 * Modern Streaming Foundation
 
@@ -66,9 +66,9 @@ Regulatory compliance through comprehensive audit trails
   
 ```
 
-<ins>Strategic Design Benefits</ins>
+### <ins>Strategic Design Benefits</ins>
 
-1. Separation of Concerns
+1. Separation of Concerns (as shown in the figure below)
 
 * Kafka: Handles raw data ingestion and real-time processing
 
