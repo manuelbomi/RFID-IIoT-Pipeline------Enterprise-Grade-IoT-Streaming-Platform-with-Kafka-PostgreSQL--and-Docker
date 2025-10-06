@@ -1,5 +1,5 @@
 # RFID-IIoT-Pipeline: Enterprise-Grade-IoT-Streaming-Platform-with-Kafka-PostgreSQL-Docker
-### (Simulate, Process, and Analyze 10,000+ RFID IoT Devices in Real-Time)
+
 
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg?logo=docker)
 ![Apache Kafka](https://img.shields.io/badge/Apache--Kafka-orange.svg?logo=apachekafka)
@@ -8,6 +8,8 @@
 
 
 ##### The RFID IIoT Pipeline is a comprehensive, production-ready data streaming platform designed specifically for massive-scale IoT and Industrial IoT (IIoT) applications. This solution enables enterprises to process, analyze, and manage real-time data from thousands of RFID devices and sensors at the edge before selectively pushing valuable insights to the cloud.
+
+![Image](https://github.com/user-attachments/assets/65f74fd5-6dc3-40b0-b511-13a059f82342)
 
 
 ## Critical Enterprise Value Propositions
