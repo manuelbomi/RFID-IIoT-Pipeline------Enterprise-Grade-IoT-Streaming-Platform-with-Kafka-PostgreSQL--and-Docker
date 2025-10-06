@@ -114,7 +114,7 @@ Regulatory compliance through comprehensive audit trails
 
 ## Enterprise Use Cases
 
-### <ins>Retail & Inventory Management</ins>  🏪 
+### <ins>Retail & Inventory Management</ins>  
 
 * Real-time inventory tracking with RFID tags
 
@@ -126,7 +126,7 @@ Regulatory compliance through comprehensive audit trails
 
 * Customer behavior analysis through product interaction tracking
 
-### <ins>Manufacturing & Industrial IoT (IIoT)</ins> 🏪
+### <ins>Manufacturing & Industrial IoT (IIoT)</ins> 
 
 * Asset tracking across production lines
 
@@ -138,7 +138,7 @@ Regulatory compliance through comprehensive audit trails
 
 * Work-in-progress tracking through manufacturing stages
 
-### <ins>Smart Buildings & Facilities</ins> 🏪
+### <ins>Smart Buildings & Facilities</ins> 
 
 * Access control with RFID badges
 
@@ -150,7 +150,7 @@ Regulatory compliance through comprehensive audit trails
 
 * Energy management through equipment usage tracking
 
-### <ins>Logistics & Supply Chain</ins>  🏪
+### <ins>Logistics & Supply Chain</ins>  
 
 * Real-time shipment tracking
 
@@ -162,7 +162,7 @@ Regulatory compliance through comprehensive audit trails
 
 * Delivery route optimization
 
-### <ins>Healthcare & Pharmaceuticals</ins>  🏪
+### <ins>Healthcare & Pharmaceuticals</ins>  
 
 * Medical equipment tracking
 
@@ -174,7 +174,7 @@ Regulatory compliance through comprehensive audit trails
 
 * Regulatory compliance monitoring
 
-### <ins>Key Features</ins> 🏪
+### <ins>Key Features</ins> 
 
 * Massive IoT Streaming Capabilities
 
@@ -186,7 +186,7 @@ Regulatory compliance through comprehensive audit trails
 
 * Low-latency data ingestion (<1 second end-to-end)
 
-### <ins>Edge Computing Advantages</ins> 🏪
+### <ins>Edge Computing Advantages</ins> 
 
 * Local data processing reduces cloud dependency
 
@@ -196,7 +196,7 @@ Regulatory compliance through comprehensive audit trails
 
 * Real-time decision making at the edge
 
-### <ins>Cost Optimization</ins> 🏪
+### <ins>Cost Optimization</ins> 
 
 * Reduced cloud infrastructure costs - process data locally
 
