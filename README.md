@@ -7,9 +7,13 @@
 ![Python](https://img.shields.io/badge/Python-3.11-green.svg?logo=python)
 
 
-##### The RFID IIoT Pipeline is a comprehensive, production-ready data streaming platform designed specifically for massive-scale IoT and Industrial IoT (IIoT) applications. This solution enables enterprises to process, analyze, and manage real-time data from thousands of RFID devices and sensors at the edge before selectively pushing valuable insights to the cloud.
+##### The RFID IIoT Pipeline is a comprehensive, production-ready data streaming platform designed specifically for massive-scale IoT and Industrial IoT (IIoT) applications. 
 
 ![Image](https://github.com/user-attachments/assets/65f74fd5-6dc3-40b0-b511-13a059f82342)
+
+##### This solution enables enterprises to process, analyze, and manage real-time data from thousands of RFID devices and sensors at the edge before selectively pushing valuable insights to the cloud.
+
+
 
 
 ## Critical Enterprise Value Propositions
