@@ -314,12 +314,19 @@ docker-compose up -d
 
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/d11392d4-4527-446e-8a9d-cbd648c6a8fa" />
 
-**Sample data from both temperature (IoT) and prices (RFID) table**
+**Streaming data from both temperature (IoT) and prices (RFID) tables**
 
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/9ae2cb7b-37bd-455c-8576-8a8ea2692f8a" />
 
 
+**Database growing as more data stream into the tables**
 
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/735148a7-7a4d-4451-a707-56804ffbd44e" />
+
+
+**How to manually start up Kafka producer and consumer topics in case it doesn't auto start**
+
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/aff6106a-adbc-44f9-bf11-c498859d325c" />
 
 ---
 
