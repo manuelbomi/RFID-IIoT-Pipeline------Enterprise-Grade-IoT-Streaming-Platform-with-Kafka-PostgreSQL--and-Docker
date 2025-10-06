@@ -268,6 +268,7 @@ docker-compose ps
 ```
 
 * Create Kafka Topics (if not auto-created)
+  
 ```ruby
 # Create temperature reads topic
 docker-compose exec kafka kafka-topics --create \
@@ -284,9 +285,99 @@ docker-compose exec kafka kafka-topics --create \
   --replication-factor 1
 ```
 
-# Verify Topics Creation
+* Verify Topics Creation
+  
 ```ruby
 docker-compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
+```
+
+---
+
+## Technical Configuration
+
+### <ins>Kafka Topic Management</ins>
+
+* Create Partitioned Topics for Scaling
+
+```ruby
+
+# For high-volume applications, use multiple partitions
+docker-compose exec kafka kafka-topics --create \
+  --topic temperature_reads \
+  --bootstrap-server localhost:9092 \
+  --partitions 10 \
+  --replication-factor 1
+
+docker-compose exec kafka kafka-topics --create \
+  --topic price_lookups \
+  --bootstrap-server localhost:9092 \
+  --partitions 5 \
+  --replication-factor 1
+
+```
+
+* Monitor Kafka Topic Performance
+
+```ruby
+
+# Check topic details
+docker-compose exec kafka kafka-topics --describe --bootstrap-server localhost:9092
+
+# Monitor message rates
+docker-compose exec kafka kafka-run-class kafka.tools.GetOffsetShell \
+  --bootstrap-server localhost:9092 \
+  --topic temperature_reads --time -1
+
+```
+
+* Consumer Group Management
+
+
+```ruby
+
+# List consumer groups
+docker-compose exec kafka kafka-consumer-groups --list --bootstrap-server localhost:9092
+
+# Check consumer lag
+docker-compose exec kafka kafka-consumer-groups --describe \
+  --group rfid_temperature_ingestor \
+  --bootstrap-server localhost:9092
+
+
+```
+
+* Data Formats
+
+<ins>Temperature Read Events</ins>
+
+```ruby
+
+{
+  "event": "temperature_read",
+  "epc": "3014B2C3D4E5F6",
+  "temperature": 1.5,
+  "unit": "C",
+  "timestamp": "2025-10-05T18:00:00Z"
+}
+
+
+```
+
+<ins>Price Lookup Events</ins>
+
+```ruby
+{
+  "event": "price_lookup",
+  "epc": "3014B2C3D4E5F6",
+  "item_details": {
+    "name": "Leather Jacket",
+    "sku": "LJ-4577",
+    "price": 199.99,
+    "currency": "USD"
+  },
+  "timestamp": "2025-10-05T18:00:00Z"
+}
+
 ```
 
 
