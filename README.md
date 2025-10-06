@@ -326,6 +326,8 @@ docker-compose up -d
 
 **How to manually start up Kafka producer and consumer topics in case it doesn't auto start**
 
+*docker-compose up -d producer consumer*
+
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/aff6106a-adbc-44f9-bf11-c498859d325c" />
 
 ---
