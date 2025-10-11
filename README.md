@@ -109,7 +109,7 @@ Regulatory compliance through comprehensive audit trails
 
     * Cloud vendor independence - deploy on-premises or any cloud provider
 
-    * Protocol flexibility - supports MQTT, HTTP, and custom protocols
+    * Protocol flexibility - supports MQTT, HTTP, CoAP, LoRAWAN, and/or custom protocols
   
   ---
 
