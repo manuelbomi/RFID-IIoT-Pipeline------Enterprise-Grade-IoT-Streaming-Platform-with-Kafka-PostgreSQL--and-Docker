@@ -25,7 +25,7 @@
 
   * Future-proof architecture that adapts to evolving IoT landscapes
 
-This isn't just a technical demonstration, it is a production-proven foundation for enterprise IoT transformation that delivers immediate ROI through reduced cloud costs and enhanced operational intelligence.
+This project isn't just a technical demonstration, it is a production-proven foundation for enterprise IoT transformation that delivers immediate ROI through reduced cloud costs and enhanced operational intelligence.
 
 ---
 
