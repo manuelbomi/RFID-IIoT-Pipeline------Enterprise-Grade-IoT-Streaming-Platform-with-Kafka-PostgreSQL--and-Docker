@@ -105,7 +105,7 @@ Regulatory compliance through comprehensive audit trails
 
 3. Technology Agnostic
 
-    * Interchangeable components (Kafka → RabbitMQ, PostgreSQL → TimescaleDB)
+    * Interchangeable components (Kafka → RabbitMQ, PostgreSQL → TimescaleDB or DuckDB)
 
     * Cloud vendor independence - deploy on-premises or any cloud provider
 
