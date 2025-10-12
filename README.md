@@ -157,7 +157,7 @@ Regulatory compliance through comprehensive audit trails
 
 * Cold chain monitoring for perishable goods
 
-* Warehouse inventory management
+* Warehouse inventory management/warehouse space optimization
 
 * Cross-docking operations optimization
 
